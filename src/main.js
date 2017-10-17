@@ -9,7 +9,7 @@ import { store } from './store/store'
 import iView from 'iview'
 import 'iview/dist/styles/iview.css'
 
-Vue.config.productionTip = false
+Vue.config.productionTip = true
 Vue.use(ElementUI)
 Vue.use(iView)
 /* eslint-disable no-new */

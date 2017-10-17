@@ -113,7 +113,7 @@ export default new Router({
         },
         // 首页
         {
-          path: '/index',
+          path: '',
           name: 'index',
           component: Index
         },
