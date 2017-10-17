@@ -1,7 +1,7 @@
 <template>
   <div class="layout-header">
     <el-breadcrumb id="bread_left" separator="/">
-      <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
+      <el-breadcrumb-item :to="{ path: '/' }" v-if="this.breadcrumbs[1]">首页</el-breadcrumb-item>
       <el-breadcrumb-item v-for="(item, index) in breadcrumbs" key="index">{{item}}</el-breadcrumb-item>
     </el-breadcrumb>
     <div class="home_top">

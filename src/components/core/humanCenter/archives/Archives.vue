@@ -1,19 +1,20 @@
 <template>
   <div>
-    <top :breadcrumbs=breadcrumbs></top>
-    人事档案
+    <div class="archClass">
+    </div>
   </div>
 </template>
 <script>
-  import Top from '@/components/top/Top.vue'
   export default {
     components: {
-      Top
     },
     data () {
       return {
         breadcrumbs: ['人力中心', '人事档案']
       }
+    },
+    beforeMount () {
+      this.$emit('breadcrumbs', this.breadcrumbs)
     }
   }
 </script>

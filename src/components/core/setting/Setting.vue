@@ -1,14 +1,19 @@
 <template>
   <div>
-    <top></top>
     设置
   </div>
 </template>
 <script>
-  import Top from '@/components/top/top'
   export default {
     components: {
-      Top
+    },
+    data () {
+      return {
+        breadcrumbs: ['设置']
+      }
+    },
+    beforeMount () {
+      this.$emit('breadcrumbs', this.breadcrumbs)
     }
   }
 </script>

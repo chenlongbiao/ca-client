@@ -95,24 +95,38 @@
       </i-col>
       <i-col span="20" class="home_right">
         <div>
-          <router-view></router-view>
+          <top :breadcrumbs=this.breadcrumbs></top>
+          <router-view @breadcrumbs = breadcrumbsF></router-view>
         </div>
       </i-col>
     </Row>
   </div>
 </template>
 <script>
+  import Top from '../top/Top'
   export default {
+    data () {
+      return {
+        breadcrumbs: ''
+      }
+    },
     methods: {
       handleSelect (index, indexPath) {
         console.log(index)
         console.log(indexPath)
+      },
+      breadcrumbsF (msg) {
+        console.log(msg)
+        this.breadcrumbs = msg
       }
     },
     computed: {
       defaultActive () {
         return this.$route.path
       }
+    },
+    components: {
+      Top
     }
   }
 </script>
