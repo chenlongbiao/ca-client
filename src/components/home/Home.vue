@@ -3,7 +3,7 @@
     <Row type="flex" class="left">
       <i-col span="4" class="layout-menu-left">
         <el-menu :default-active=defaultActive class="el-menu-vertical-demo" @select="handleSelect" theme="dark" router>
-          <el-menu-item index="/">
+          <el-menu-item index="/home">
             <template slot="title">
               <Icon type="home"></Icon>
               首页

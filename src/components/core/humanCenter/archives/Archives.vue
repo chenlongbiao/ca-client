@@ -1,6 +1,7 @@
 <template>
   <div>
     <div class="archClass">
+      人事档案
     </div>
   </div>
 </template>

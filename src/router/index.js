@@ -16,22 +16,35 @@ import Attachement from '@/components/core/repository/attachement/Attachement'
 import CommonFile from '@/components/core/repository/commonFile/CommonFile'
 import Index from '@/components/core/index/Index'
 import Setting from '@/components/core/setting/Setting'
-
+import Login from '@/components/login/Login'
 Vue.use(Router)
 
 export default new Router({
-  mode: 'hash',
+  mode: 'history',
   routes: [
+    // 注册
     {
       path: '/',
+      name: 'login',
+      component: Login
+    },
+    {
+      path: '/home',
       name: 'Home',
       component: Home,
+      // redirect: '/login',
       children: [
         // 人事档案
         {
           path: '/humancenter/Archives',
           name: 'Archives',
           component: Archives
+        },
+        // 首页
+        {
+          path: '',
+          name: 'index',
+          component: Index
         },
         // 考勤
         {
@@ -56,12 +69,6 @@ export default new Router({
           path: '/humancenter/Salary',
           name: 'Salary',
           component: Salary
-        },
-        // 培训
-        {
-          path: '/humancenter/Train',
-          name: 'Train',
-          component: Train
         },
         // 培训
         {
@@ -110,12 +117,6 @@ export default new Router({
           path: '/personalCenter/dataModification',
           name: 'dataModification',
           component: DataModification
-        },
-        // 首页
-        {
-          path: '',
-          name: 'index',
-          component: Index
         },
         // 设置
         {

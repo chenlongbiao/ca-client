@@ -1,11 +1,10 @@
 <template>
   <div class="layout-header">
     <el-breadcrumb id="bread_left" separator="/">
-      <el-breadcrumb-item :to="{ path: '/' }" v-if="this.breadcrumbs[1]">首页</el-breadcrumb-item>
+      <el-breadcrumb-item :to="{ path: '/home' }" v-if="this.breadcrumbs[1]">首页</el-breadcrumb-item>
       <el-breadcrumb-item v-for="(item, index) in breadcrumbs" key="index">{{item}}</el-breadcrumb-item>
     </el-breadcrumb>
     <div class="home_top">
-      <img :src=imgUrl />
     </div>
   </div>
 </template>
@@ -37,5 +36,7 @@
   }
   .home_top {
     height: 60px;
+    width: 60px;
+    background: url("../../assets/logo1.png");
   }
 </style>
