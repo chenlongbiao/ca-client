@@ -27,7 +27,7 @@
         <img src="../../../assets/email.jpg"/>
       </template>
     </el-input>
-    <button class="sign_sub">登录</button>
+    <button class="sign_sub" @click="toSignIn">注册</button>
     <!--<div class="login_btt">-->
       <!--<el-button type="text" @click="toSignUp">我要注册</el-button>-->
     <!--</div>-->
@@ -44,8 +44,8 @@
       }
     },
     methods: {
-      toSignUp () {
-        this.$emit('')
+      toSignIn () {
+        this.$emit('toSignIn', 1)
       }
     }
   }

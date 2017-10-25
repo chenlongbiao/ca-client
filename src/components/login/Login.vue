@@ -1,7 +1,7 @@
 <template>
   <div class="login_class">
     <div class="login_mid">
-      <sign-up v-if="signFlag === 0"></sign-up>
+      <sign-up v-if="signFlag === 0" @toSignIn = changeLogin></sign-up>
       <sign-in v-if="signFlag === 1" @toSignUp = changeLogin></sign-in>
     </div>
   </div>

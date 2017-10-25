@@ -14,7 +14,7 @@
         <img src="../../../assets/password.jpg"/>
       </template>
     </el-input>
-    <button class="sign_sub">登录</button>
+    <button class="sign_sub" @click="login">登录</button>
     <div class="login_btt">
       <el-button type="text" @click="toSignUp">我要注册</el-button>
     </div>
@@ -31,6 +31,9 @@
       }
     },
     methods: {
+      login () {
+        this.$router.push('home')
+      },
       toSignUp () {
         this.$emit('toSignUp', 0)
       }

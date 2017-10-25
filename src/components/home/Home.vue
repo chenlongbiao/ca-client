@@ -1,8 +1,7 @@
 <template>
   <div class="layout">
-    <Row type="flex" class="left">
-      <i-col span="4" class="layout-menu-left">
-        <el-menu :default-active=defaultActive class="el-menu-vertical-demo" @select="handleSelect" theme="dark" router>
+      <div  class="layout-menu-left">
+        <el-menu :default-active=defaultActive class="el-menu-vertical-demo" @select="handleSelect" router>
           <el-menu-item index="/home">
             <template slot="title">
               <Icon type="home"></Icon>
@@ -92,14 +91,20 @@
             </template>
           </el-menu-item>
         </el-menu>
-      </i-col>
-      <i-col span="20" class="home_right">
+      </div>
+      <div class="home_right">
         <div>
-          <top :breadcrumbs=this.breadcrumbs></top>
+          <top :breadcrumbs=this.breadcrumbs @showLogs = showLogs></top>
+          <span class="logOut" v-if="this.showLog" @click = logOut>
+            <ul>
+              <li>
+                退出
+              </li>
+            </ul>
+          </span>
           <router-view @breadcrumbs = breadcrumbsF></router-view>
         </div>
-      </i-col>
-    </Row>
+      </div>
   </div>
 </template>
 <script>
@@ -107,13 +112,21 @@
   export default {
     data () {
       return {
-        breadcrumbs: ''
+        breadcrumbs: '',
+        showLog: false
       }
     },
     methods: {
+      logOut () {
+        this.$router.push('/')
+      },
+      showLogs (msg) {
+        this.showLog = msg
+        console.log(msg)
+      },
       handleSelect (index, indexPath) {
-        console.log(index)
-        console.log(indexPath)
+//        console.log(index)
+//        console.log(indexPath)
       },
       breadcrumbsF (msg) {
         console.log(msg)
@@ -135,37 +148,37 @@
     border: 1px solid #d7dde4;
     background: #f5f7f9;
     position: relative;
-    min-height: 900px;
+    min-height: 920px;
     overflow: hidden;
+    min-width: 1024px;
   }
-
-  /*i {
-    width: 14px;
-    margin-right: 10px
-  }*/
-
-  .layout-content {
-    min-height: 790px;
-    margin: 25px;
-    overflow: hidden;
-    background: #fff;
-    border-radius: 4px;
+  .el-menu-vertical-demo  .el-submenu .el-menu{
+    background-color: #3e8db8;
+    color: red;
   }
-  .layout-content-main {
-    padding: 10px;
+  .el-menu-vertical-demo  .el-menu-item{
+    color: white;
   }
-  .layout-copy {
-    text-align: center;
-    padding: 10px 0 20px;
-    color: #9ea7b4;
+  .el-menu-vertical-demo  .el-submenu__title{
+    color: white;
+  }
+  .el-menu-vertical-demo {
+    background-color: #4796e5;
   }
   .layout-menu-left {
-    background: #324157;
-    min-height: 900px;
+    background: #4796e5;
+    min-height: 1000px;
+    width: 250px;
     overflow: auto;
+    color: red;
+    float: left;
   }
-  .left {
-    overflow: hidden;
+  .logOut {
+    float: right;
+    height: 30px;
+    width: 60px;
+    text-align: center;
+    box-shadow: 0 1px 1px rgba(0,0,0,.1);
+    line-height: 30px;
   }
-
 </style>
