@@ -2,7 +2,7 @@
   <div class="signIn_class">
       <h4>
     </h4>
-    <el-input class="signIn_input" placeholder="请输入用户名" v-model="user.userName">
+    <el-input class="signIn_input" placeholder="请输入手机号或邮箱" v-model="user.userName">
       <template  slot="prepend">
         <!--<span style="background: url('../../../assets/user.jpg');height:40px"></span>-->
         <img src="../../../assets/user.jpg"/>
