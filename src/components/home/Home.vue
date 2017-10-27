@@ -188,4 +188,9 @@
     box-shadow: 0 1px 1px rgba(0,0,0,.1);
     line-height: 30px;
   }
+  .home_right {
+    width: 1090px;
+    margin-left: 250px;
+    /*float: left;*/
+  }
 </style>
