@@ -95,7 +95,7 @@
       <div class="home_right">
         <div>
           <top :breadcrumbs=this.breadcrumbs @showLogs = showLogs></top>
-          <span class="logOut" v-if="this.showLog" @click = logOut>
+          <span @mouseenter="showLogOut"  @mouseleave="showLogOut2" class="logOut" v-if="this.showLog || this.showLog1" @click = logOut>
             <ul>
               <li>
                 退出
@@ -113,10 +113,17 @@
     data () {
       return {
         breadcrumbs: '',
-        showLog: false
+        showLog: false,
+        showLog1: false
       }
     },
     methods: {
+      showLogOut () {
+        this.showLog1 = !this.showLog
+      },
+      showLogOut2 () {
+        this.showLog1 = !this.showLog1
+      },
       logOut () {
         this.$router.push('/')
       },
@@ -129,7 +136,7 @@
 //        console.log(indexPath)
       },
       breadcrumbsF (msg) {
-        console.log(msg)
+//        console.log(msg)
         this.breadcrumbs = msg
       }
     },
