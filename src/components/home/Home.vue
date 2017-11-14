@@ -95,13 +95,6 @@
       <div class="home_right">
         <div>
           <top :breadcrumbs=this.breadcrumbs @showLogs = showLogs></top>
-          <span @mouseenter="showLogOut"  @mouseleave="showLogOut2" class="logOut" v-if="this.showLog || this.showLog1" @click = logOut>
-            <ul>
-              <li>
-                退出
-              </li>
-            </ul>
-          </span>
           <router-view @breadcrumbs = breadcrumbsF></router-view>
         </div>
       </div>
@@ -118,15 +111,6 @@
       }
     },
     methods: {
-      showLogOut () {
-        this.showLog1 = !this.showLog
-      },
-      showLogOut2 () {
-        this.showLog1 = !this.showLog1
-      },
-      logOut () {
-        this.$router.push('/')
-      },
       showLogs (msg) {
         this.showLog = msg
         console.log(msg)
@@ -179,14 +163,6 @@
     overflow: auto;
     color: red;
     float: left;
-  }
-  .logOut {
-    float: right;
-    height: 30px;
-    width: 60px;
-    text-align: center;
-    box-shadow: 0 1px 1px rgba(0,0,0,.1);
-    line-height: 30px;
   }
   .home_right {
     width: 1090px;

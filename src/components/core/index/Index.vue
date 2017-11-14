@@ -1,6 +1,26 @@
 <template>
   <div class="indexClass">
-    <div class="com_message"><h4 class="index_title">公司新闻</h4></div>
+    <div class="com_message"><h4 class="index_title">公司新闻</h4>
+        <ul style="height: 90%;">
+          <li>新闻1</li>
+          <li>新闻1</li>
+          <li>新闻1</li>
+          <li>新闻1</li>
+          <li>新闻1</li>
+          <li>新闻1</li>
+          <li>新闻1</li>
+          <li>新闻1</li>
+          <li>新闻1</li>
+          <li>新闻1</li>
+          <li>新闻1</li>
+          <li>新闻1</li>
+          <li>新闻1</li>
+          <li>新闻1</li>
+        </ul>
+      <button>上一页</button>
+      <button>上一页</button>
+      <button>下一页</button>
+    </div>
     <div class="calendar_div"><h4 class="index_title">个人考勤情况  签到功能。日期记事（待办）</h4>
       <vue-event-calendar :events="demoEvents" @day-changed="aaa" @dayChanged="bbb">
         <template scope="props">
@@ -11,28 +31,30 @@
                 <!--{{activeEven.events[0].title}}-->
               </h3>
               <p class="time">
-                {{event.date.toLocaleString()}}
+                {{event.date}}
               </p>
               <p class="desc">
-                {{event.desc}}
+                <el-button type="success" disabled v-if="event.desc === '已签'" class="btdesc" >{{event.desc}} {{event.date}}</el-button>
+                <el-button type="danger" v-if="event.desc === '未签'" class="btdesc" @click="signed(event)">{{event.desc}}</el-button>
               </p>
             </div>
             <!--<div>111</div>-->
           </div>
           <div  v-for="(event, index) in demoEvents" v-if="(!activeEven.events || !activeEven.events[0]) && event.title === '签到'"
-               class="event-item">
-              <div class="wrapper">
-                <h3 class="title">
-                  {{index + 1}}. {{event.title}}
-                  <!--{{activeEven.events[0].title}}-->
-                </h3>
-                <p class="time">
-                  {{event.date.toLocaleString()}}
-                </p>
-                <p class="desc">
-                  {{event.desc}}
-                </p>
-              </div>
+               >
+              <!--<div class="wrapper">-->
+                <!--<h3 class="title">-->
+                  <!--{{index + 1}}. {{event.title}}-->
+                  <!--&lt;!&ndash;{{activeEven.events[0].title}}&ndash;&gt;-->
+                <!--</h3>-->
+                <!--<p class="time">-->
+                  <!--{{event.date}}-->
+                <!--</p>-->
+                <!--<p class="desc">-->
+                  <!--<el-button type="success" disabled v-if="event.desc === '已签'" class="btdesc" >{{event.desc}} </el-button>-->
+                  <!--<el-button type="danger" v-if="event.desc === '未签'" class="btdesc" @click="signed(event)">{{event.desc}}</el-button>-->
+                <!--</p>-->
+              <!--</div>-->
             </div>
         </template>
       </vue-event-calendar>
@@ -51,7 +73,7 @@
         }, {
           date: '2017/10/16',
           title: '签到',
-          desc: '已签'
+          desc: '未签'
         }, {
           date: '2017/10/16',
           title: 'eat',
@@ -77,6 +99,17 @@
 //      console.log('2017/10/27'.split('/')[0])
     },
     methods: {
+      signed (evevt) {
+        let date = evevt.date
+        let demoEvents = this.demoEvents
+        for (let i = 0; i < demoEvents.length; i++) {
+          console.log(demoEvents[i].date === date)
+          if (demoEvents[i].date === date && demoEvents[i].desc === '未签') {
+            demoEvents[i].desc = '已签'
+          }
+        }
+        this.demoEvents = demoEvents
+      },
 //      initDate () {
 //        this.aaa()
 //      },
@@ -92,6 +125,9 @@
   }
 </script>
 <style>
+  .btdesc {
+    width: 100%;
+  }
   .per_message {
     border: 1px darkorange solid;
     min-width: 1090px;
