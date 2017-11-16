@@ -17,13 +17,14 @@
           <li>新闻1</li>
           <li>新闻1</li>
         </ul>
-      <button>上一页</button>
-      <button>上一页</button>
-      <button>下一页</button>
+      <el-pagination
+        layout="prev, pager, next"
+        :total="1000">
+      </el-pagination>
     </div>
     <div class="calendar_div"><h4 class="index_title">个人考勤情况  签到功能。日期记事（待办）</h4>
       <vue-event-calendar :events="demoEvents" @day-changed="aaa" @dayChanged="bbb">
-        <template scope="props">
+        <template>
           <div v-for="(event, index) in activeEven.events" class="event-item">
             <div class="wrapper">
               <h3 class="title">
@@ -36,6 +37,7 @@
               <p class="desc">
                 <el-button type="success" disabled v-if="event.desc === '已签'" class="btdesc" >{{event.desc}} {{event.date}}</el-button>
                 <el-button type="danger" v-if="event.desc === '未签'" class="btdesc" @click="signed(event)">{{event.desc}}</el-button>
+                <span v-if="event.desc != '未签'&&event.desc != '已签'">{{event.desc}}</span>
               </p>
             </div>
             <!--<div>111</div>-->
