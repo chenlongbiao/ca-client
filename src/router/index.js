@@ -1,24 +1,42 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '@/components/home/Home'
-import Archives from '@/components/core/humanCenter/archives/Archives'
-import Attendance from '@/components/core/humanCenter/attendance/Attendance'
-import InviteJob from '@/components/core/humanCenter/inviteJob/InviteJob'
-import Performance from '@/components/core/humanCenter/performance/Performance'
-import Salary from '@/components/core/humanCenter/salary/Salary'
-import Train from '@/components/core/humanCenter/train/Train'
-import ContractApprove from '@/components/core/contractManage/contractApprove/ContractApprove'
-import ContractFiling from '@/components/core/contractManage/contractFiling/ContractFiling'
-import DataModification from '@/components/core/personalCenter/dataModification/DataModification'
-import Membership from '@/components/core/personalCenter/membership/Membership'
-import PersonalData from '@/components/core/personalCenter/personalData/PersonalData'
-import Attachement from '@/components/core/repository/attachement/Attachement'
-import CommonFile from '@/components/core/repository/commonFile/CommonFile'
-import Index from '@/components/core/index/Index'
-import Setting from '@/components/core/setting/Setting'
-import Login from '@/components/login/Login'
 Vue.use(Router)
 
+const Login = r => require.ensure([], () => r(require('@/components/login/Login')), 'Login')
+const Home = r => require.ensure([], () => r(require('@/components/home/Home')), 'Home')
+const Archives = r => require.ensure([], () => r(require('@/components/core/humanCenter/archives/Archives')), 'Archives')
+const Attendance = r => require.ensure([], () => r(require('@/components/core/humanCenter/attendance/Attendance')), 'Attendance')
+const InviteJob = r => require.ensure([], () => r(require('@/components/core/humanCenter/inviteJob/InviteJob')), 'InviteJob')
+const Performance = r => require.ensure([], () => r(require('@/components/core/humanCenter/performance/Performance')), 'Performance')
+const Salary = r => require.ensure([], () => r(require('@/components/core/humanCenter/salary/Salary')), 'Salary')
+const Train = r => require.ensure([], () => r(require('@/components/core/humanCenter/train/Train')), 'Train')
+const ContractApprove = r => require.ensure([], () => r(require('@/components/core/contractManage/contractApprove/ContractApprove')), 'ContractApprove')
+const ContractFiling = r => require.ensure([], () => r(require('@/components/core/contractManage/contractFiling/ContractFiling')), 'ContractFiling')
+const DataModification = r => require.ensure([], () => r(require('@/components/core/personalCenter/dataModification/DataModification')), 'DataModification')
+const Membership = r => require.ensure([], () => r(require('@/components/core/personalCenter/membership/Membership')), 'Membership')
+const PersonalData = r => require.ensure([], () => r(require('@/components/core/personalCenter/personalData/PersonalData')), 'PersonalData')
+const Attachement = r => require.ensure([], () => r(require('@/components/core/repository/attachement/Attachement')), 'Attachement')
+const CommonFile = r => require.ensure([], () => r(require('@/components/core/repository/commonFile/CommonFile')), 'CommonFile')
+const Index = r => require.ensure([], () => r(require('@/components/core/index/Index')), 'Index')
+const Setting = r => require.ensure([], () => r(require('@/components/core/setting/Setting')), 'Setting')
+// const ContractFiling = r => require.ensure([], () => r(require('@/components/core/contractManage/contractFiling/ContractFiling')), 'ContractFiling');
+// import Home from '@/components/home/Home'
+// import Archives from '@/components/core/humanCenter/archives/Archives'
+// import Attendance from '@/components/core/humanCenter/attendance/Attendance'
+// import InviteJob from '@/components/core/humanCenter/inviteJob/InviteJob'
+// import Performance from '@/components/core/humanCenter/performance/Performance'
+// import Salary from '@/components/core/humanCenter/salary/Salary'
+// import Train from '@/components/core/humanCenter/train/Train'
+// import ContractApprove from '@/components/core/contractManage/contractApprove/ContractApprove'
+// import ContractFiling from '@/components/core/contractManage/contractFiling/ContractFiling'
+// import DataModification from '@/components/core/personalCenter/dataModification/DataModification'
+// import Membership from '@/components/core/personalCenter/membership/Membership'
+// import PersonalData from '@/components/core/personalCenter/personalData/PersonalData'
+// import Attachement from '@/components/core/repository/attachement/Attachement'
+// import CommonFile from '@/components/core/repository/commonFile/CommonFile'
+// import Index from '@/components/core/index/Index'
+// import Setting from '@/components/core/setting/Setting'
+// import Login from '@/components/login/Login'
 export default new Router({
   mode: 'history',
   routes: [
