@@ -63,7 +63,7 @@
   .signUp_input input{
     height: 40px;
   }
-  .signUp_input{
+  .signUp_input .el-input-group{
     width: 85%;
     margin-top: 20px;
     padding: 0;
