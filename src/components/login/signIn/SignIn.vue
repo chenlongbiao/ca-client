@@ -89,7 +89,9 @@
     margin-top: 120px;
     outline:none;
     background: #006cd4;
-    /*color: white;*/
+    letter-spacing: 15px;
+    font-size: 18px;
+    color: white;
   }
   .login_btt {
     width: 80%;
