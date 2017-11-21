@@ -140,7 +140,7 @@
   .com_message {
     border: 1px darkorange solid;
     /*min-width: 420px;*/
-    width: 39.8%;
+    width: 40%;
     height: 631px;
     margin-right: -1px;
     float: left;
@@ -148,7 +148,7 @@
 
   .index_title {
     margin: -1px -1px 0px -1px;
-    text-align: center;
+    text-align: left;
     border: 1px darkorange solid;
   }
 
@@ -161,6 +161,6 @@
   }
 
   .indexClass {
-    min-width: 1150px;
+    min-width: 1090px;
   }
 </style>
