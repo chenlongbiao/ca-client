@@ -98,6 +98,7 @@
           <router-view @breadcrumbs = breadcrumbsF></router-view>
         </div>
       </div>
+    <el-input></el-input>
   </div>
 </template>
 <script>

@@ -140,7 +140,7 @@
   .com_message {
     border: 1px darkorange solid;
     /*min-width: 420px;*/
-    width: 40%;
+    width: 39.8%;
     height: 631px;
     margin-right: -1px;
     float: left;

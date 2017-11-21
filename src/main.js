@@ -3,18 +3,25 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import ElementUI from 'element-ui'
-import 'element-ui/lib/theme-default/index.css'
+import {Input, Button, Menu, Submenu, MenuItem, Breadcrumb, BreadcrumbItem} from 'element-ui'
+// import 'element-ui/lib/theme-default/index.css'
+import 'element-ui/lib/theme-default/button.css'
 import { store } from './store/store'
-import iView from 'iview'
-import 'iview/dist/styles/iview.css'
 import 'vue-event-calendar/dist/style.css'
 import vueEventCalendar from 'vue-event-calendar'
 
 Vue.config.productionTip = true
-Vue.use(ElementUI)
+Vue.component(Button.name, Button)
+Vue.component(Input.name, Input)
+Vue.component(Menu.name, Menu)
+Vue.component(MenuItem.name, MenuItem)
+Vue.component(Breadcrumb.name, Breadcrumb)
+Vue.component(BreadcrumbItem.name, BreadcrumbItem)
+// Vue.component(MenuItemGroup.name, MenuItemGroup)
+Vue.component(Submenu.name, Submenu)
+// Vue.use(Button)
 Vue.use(vueEventCalendar, {locale: 'zh'})
-Vue.use(iView)
+// Vue.use(iView)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
