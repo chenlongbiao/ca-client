@@ -132,15 +132,15 @@
   }
   .per_message {
     border: 1px darkorange solid;
-    min-width: 1090px;
+    width: 100%;
     height: 226px;
     float: left;
   }
 
   .com_message {
     border: 1px darkorange solid;
-    width: 340px;
-    /*max-width: 750px;*/
+    /*min-width: 420px;*/
+    width: 40%;
     height: 631px;
     margin-right: -1px;
     float: left;
@@ -155,11 +155,12 @@
   .calendar_div {
     /*width: 1200px;*/
     float: left;
-    width: 750px;
+    min-width: 635px;
+    width: 60%;
     border: 1px darkorange solid;
   }
 
   .indexClass {
-    min-width: 1098px;
+    min-width: 1150px;
   }
 </style>

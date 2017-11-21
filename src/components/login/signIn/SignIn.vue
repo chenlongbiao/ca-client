@@ -14,7 +14,7 @@
         <img src="../../../assets/password.jpg"/>
       </template>
     </el-input>
-    <button class="sign_sub1" @click="login">登录</button>
+    <button class="sign_sub1" @click="login">登   录</button>
     <div class="login_btt">
       <el-button type="text" @click="toSignUp">我要注册</el-button>
     </div>

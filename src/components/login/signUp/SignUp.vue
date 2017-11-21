@@ -103,7 +103,7 @@
     margin-top: 40px;
     outline:none;
     background: #006cd4;
-    letter-spacing: 15px;
+    letter-spacing: 18px;
     font-size: 18px;
     color: white;
   }

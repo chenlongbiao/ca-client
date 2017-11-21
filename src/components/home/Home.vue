@@ -165,7 +165,7 @@
     float: left;
   }
   .home_right {
-    width: 1090px;
+    min-width: 1090px;
     margin-left: 250px;
     /*float: left;*/
   }
