@@ -40,6 +40,8 @@ const Setting = r => require.ensure([], () => r(require('@/components/core/setti
 export default new Router({
   mode: 'history',
   routes: [
+    // nginx下访问路由中未定义的路由（打错路径）处理方案
+    { path: '*', redirect: '/' },
     // 注册
     {
       path: '/',
