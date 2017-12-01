@@ -31,6 +31,7 @@
               <template scope="scope">
                 <el-button @click="handleClick(scope.row)" type="text" size="small">查看详细</el-button>
                 <el-button type="text" size="small">归档</el-button>
+                <el-button type="text" size="small">编辑</el-button>
                 <el-button type="text" size="small">注销</el-button>
               </template>
             </el-table-column>
