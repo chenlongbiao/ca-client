@@ -3,7 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import {Input, Button, Menu, Submenu, MenuItem, Breadcrumb, Pagination, BreadcrumbItem} from 'element-ui'
+import {Input, Button, Menu, Submenu, MenuItem, Breadcrumb, Pagination, BreadcrumbItem, Table, TableColumn, TabPane, Tabs} from 'element-ui'
 // import 'element-ui/lib/theme-default/index.css'
 import 'element-ui/lib/theme-default/button.css'
 import { store } from './store/store'
@@ -20,6 +20,10 @@ Vue.component(BreadcrumbItem.name, BreadcrumbItem)
 Vue.component(Pagination.name, Pagination)
 // Vue.component(MenuItemGroup.name, MenuItemGroup)
 Vue.component(Submenu.name, Submenu)
+Vue.component(Table.name, Table)
+Vue.component(TableColumn.name, TableColumn)
+Vue.component(Tabs.name, Tabs)
+Vue.component(TabPane.name, TabPane)
 // Vue.use(Button)
 Vue.use(vueEventCalendar, {locale: 'zh'})
 // Vue.use(iView)

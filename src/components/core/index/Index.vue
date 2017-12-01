@@ -1,7 +1,7 @@
 <template>
   <div class="indexClass">
     <div class="com_message"><h4 class="index_title">公司新闻</h4>
-        <ul style="height: 90%;">
+        <ul class="index_ul" >
           <li>新闻1</li>
           <li>新闻1</li>
           <li>新闻1</li>
@@ -127,6 +127,12 @@
   }
 </script>
 <style>
+  .index_ul {
+    height: 90%;
+  }
+  .index_ul li {
+    list-style-type:none;
+  }
   .btdesc {
     width: 100%;
   }

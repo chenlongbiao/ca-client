@@ -20,6 +20,6 @@ export default {
   margin: 0px;
   padding: 0px;
   overflow: hidden;
-  height: 924px;
+  height: 920px;
 }
 </style>

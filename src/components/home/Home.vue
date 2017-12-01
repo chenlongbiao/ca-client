@@ -1,7 +1,7 @@
 <template>
   <div class="layout">
       <div  class="layout-menu-left">
-        <el-menu :default-active=defaultActive class="el-menu-vertical-demo" @select="handleSelect" router>
+        <el-menu :default-active=defaultActive  class="el-menu-vertical-demo" @select="handleSelect" router>
           <el-menu-item index="/home">
             <template slot="title">
               首页
@@ -52,20 +52,20 @@
               共享文件
             </el-menu-item>
           </el-submenu>
-          <el-submenu index="5">
-            <template slot="title">
-              个人中心
-            </template>
-            <el-menu-item index="/personalCenter/personalData">
-              个人资料
-            </el-menu-item>
-            <el-menu-item index="/personalCenter/membership">
-              组织关系
-            </el-menu-item>
-            <el-menu-item index="/personalCenter/dataModification">
-              资料修改
-            </el-menu-item>
-          </el-submenu>
+          <!--<el-submenu index="5">-->
+            <!--<template slot="title">-->
+              <!--个人中心-->
+            <!--</template>-->
+            <!--<el-menu-item index="/personalCenter/personalData">-->
+              <!--个人资料-->
+            <!--</el-menu-item>-->
+            <!--<el-menu-item index="/personalCenter/membership">-->
+              <!--组织关系-->
+            <!--</el-menu-item>-->
+            <!--<el-menu-item index="/personalCenter/dataModification">-->
+              <!--资料修改-->
+            <!--</el-menu-item>-->
+          <!--</el-submenu>-->
           <el-menu-item index="/setting">
             <template slot="title">
               设置
@@ -120,7 +120,7 @@
     border: 1px solid #d7dde4;
     background: #f5f7f9;
     position: relative;
-    min-height: 920px;
+    height: 100%;
     overflow: hidden;
     min-width: 1024px;
   }
