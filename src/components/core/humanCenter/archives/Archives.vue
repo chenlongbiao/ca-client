@@ -1,5 +1,4 @@
 <template>
-  <div>
     <div class="archClass">
       <el-tabs v-model="activeName" class="ar_tab" @tab-click="handleClick">
         <el-tab-pane label="在职档案" name="job">
@@ -108,7 +107,6 @@
         </el-tab-pane>
       </el-tabs>
     </div>
-  </div>
 </template>
 <script>
   export default {
@@ -301,13 +299,9 @@
   .ar_page {
     margin-top: 8px;
     float: right;
-    /*width: 30%;*/
-    /*height: 36px;*/
-    /*display: inline-block;*/
   }
 
   .ar_search {
-    /*margin-bottom: 0px;*/
     margin-top: 5px;
     width: 220px;
   }
@@ -315,11 +309,9 @@
   .add_ar {
     width: 60%;
     margin: 0 auto;
-    /*text-align: center;*/
   }
 
   .add_ar label {
-    /*float: left;*/
     width: 80px;
     display: inline-block;
     text-align: right;
@@ -329,34 +321,23 @@
   .add_ar_span {
     width: 90%;
     display: inline-block;
-    /*margin: 50px;*/
   }
-
   .up_span {
     width: 80%;
     display: inline-block;
     margin: 50px auto;
   }
-
   .up_btt {
     float: left;
-    /*margin-top: 80px;*/
     margin-left: 80px;
     margin-right: 45px;
   }
-
   .clear_btt {
     float: left;
   }
-
   .ar_input {
     width: 180px;
     /*margin-left: 20px;*/
     margin-top: 20px;
   }
-
-  /*.ar_input_text {*/
-  /*width: 180px;*/
-  /*height: 60px;*/
-  /*}*/
 </style>
