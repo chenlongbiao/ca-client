@@ -74,10 +74,8 @@
         </el-menu>
       </div>
       <div class="home_right">
-        <div>
           <top :breadcrumbs=this.breadcrumbs @showLogs = showLogs></top>
           <router-view @breadcrumbs = breadcrumbsF></router-view>
-        </div>
       </div>
   </div>
 </template>
@@ -149,5 +147,6 @@
     min-width: 1090px;
     margin-left: 250px;
     /*float: left;*/
+    height: 100%;
   }
 </style>

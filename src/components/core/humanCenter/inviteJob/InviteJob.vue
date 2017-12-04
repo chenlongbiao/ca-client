@@ -1,6 +1,14 @@
 <template>
-  <div>
-    招聘
+  <div class="inviteClass">
+    <div class="presentClass">
+      当前列表
+    </div>
+    <div class="myInvite">
+      我的发布
+    </div>
+    <div>
+      审核
+    </div>
   </div>
 </template>
 <script>
@@ -18,4 +26,19 @@
   }
 </script>
 <style>
+  .inviteClass {
+    height: 100%;
+  }
+  .presentClass {
+    height: 80%;
+    width: 50%;
+    background: #5e7382;
+    display: inline-block;
+  }
+  .myInvite {
+    height: 80%;
+    width: 49%;
+    background: #1c8de0;
+    display: inline-block;
+  }
 </style>
