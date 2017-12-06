@@ -1,13 +1,29 @@
 <template>
   <div class="inviteClass">
     <div class="presentClass">
-      当前列表
+      <el-table
+        :data="tableData"
+        style="width: 100%;height: 100%">
+        <el-table-column
+          prop="lastMonthKPI"
+          label="上月绩效">
+        </el-table-column>
+        <el-table-column
+          prop="thisMonth"
+          label="本月考勤(天)">
+        </el-table-column>
+        <el-table-column
+          prop="position"
+          label="操作">
+          <template slot-scope="scope">
+            <el-button @click="handleClick(scope.row)" type="text" size="small">查看详细</el-button>
+            <el-button type="text" size="small">设置绩效</el-button>
+          </template>
+        </el-table-column>
+      </el-table>
     </div>
     <div class="myInvite">
-      我的发布
-    </div>
-    <div>
-      审核
+      223
     </div>
   </div>
 </template>
@@ -28,15 +44,19 @@
 <style>
   .inviteClass {
     height: 100%;
+    overflow: auto;
+    vertical-align:top;
   }
   .presentClass {
-    height: 80%;
+    height: 100%;
     width: 50%;
     background: #5e7382;
     display: inline-block;
+    vertical-align:top;
+
   }
   .myInvite {
-    height: 80%;
+    height: 100%;
     width: 49%;
     background: #1c8de0;
     display: inline-block;

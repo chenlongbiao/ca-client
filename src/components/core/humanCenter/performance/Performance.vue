@@ -82,4 +82,8 @@
     margin-top: 5px;
     width: 220px;
   }
+  .ar_page {
+    margin-top: 8px;
+    float: right;
+  }
 </style>
