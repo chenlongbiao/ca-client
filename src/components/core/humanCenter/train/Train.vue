@@ -1,6 +1,15 @@
 <template>
   <div>
-    培训
+    <el-tabs v-model="activeName" class="ar_tab" @tab-click="handleClick">
+      <el-tab-pane label="最近考核情况" name="lastCheck">
+      </el-tab-pane>
+      <el-tab-pane label="题库管理" name="questionManage">
+      </el-tab-pane>
+      <el-tab-pane label="试卷管理" name="tpManage">
+      </el-tab-pane>
+      <el-tab-pane label="答题" name="answer">
+      </el-tab-pane>
+    </el-tabs>
   </div>
 </template>
 <script>
