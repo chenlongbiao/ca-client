@@ -8,7 +8,9 @@ import 'element-ui/lib/theme-default/button.css'
 import { store } from './store/store'
 import 'vue-event-calendar/dist/style.css'
 import vueEventCalendar from 'vue-event-calendar'
+import VueStomp from 'vue-stomp'
 
+Vue.use(VueStomp, 'http://localhost:8081/endpoint')
 Vue.config.productionTip = true
 Vue.component(Button.name, Button)
 Vue.component(Input.name, Input)
