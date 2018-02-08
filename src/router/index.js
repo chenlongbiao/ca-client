@@ -144,14 +144,14 @@ export default new Router({
           path: '/setting',
           name: 'setting',
           component: Setting
-        },
-        // 通信
-        {
-          path: '/WebSockt',
-          name: 'WebSockt',
-          component: WebSockt
         }
       ]
+    },
+    // 通信
+    {
+      path: '/WebSockt',
+      name: 'WebSockt',
+      component: WebSockt
     }
   ]
 })

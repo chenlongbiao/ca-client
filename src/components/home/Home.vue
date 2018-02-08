@@ -1,7 +1,7 @@
 <template>
   <div class="layout">
       <div  class="layout-menu-left">
-        <el-menu :default-active=defaultActive  class="el-menu-vertical-demo" @select="handleSelect" router>
+        <el-menu :default-active=defaultActive :unique-opened=true  class="el-menu-vertical-demo" @select="handleSelect" router>
           <el-menu-item index="/home">
             <template slot="title">
               首页

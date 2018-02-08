@@ -9,6 +9,8 @@
       </el-tab-pane>
       <el-tab-pane label="答题" name="answer">
       </el-tab-pane>
+      <el-tab-pane label="我的考核" name="answer">
+      </el-tab-pane>
     </el-tabs>
   </div>
 </template>

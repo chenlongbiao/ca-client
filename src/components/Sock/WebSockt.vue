@@ -18,7 +18,7 @@
     },
     methods: {
       subone () {
-        this.$stompClient.subscribe('/topic/one', this.responseCallback, this.onFailed)
+        this.$stompClient.subscribe('/user/1/one', this.responseCallback, this.onFailed)
       },
       submore () {
         this.$stompClient.subscribe('/topic/getResponse', this.responseCallback, this.onFailed)
@@ -30,12 +30,12 @@
         console.log('Failed: ' + frame)
       },
       connectSrv () {
-        // var headers = {
-        //   'login': 'guest',
-        //   'passcode': 'guest'
-        //   // additional header
-        // }
-        this.connetWM('http://localhost:8081/endpoint', {}, this.onConnected, this.onFailed)
+        var headers = {
+          'login': 'guest',
+          'passcode': 'guest'
+          // additional header
+        }
+        this.connetWM('http://localhost:8081/webSocketServer', headers, this.onConnected, this.onFailed)
       },
       getInvokeId () {
         let hex = (this.invokeIdCnt++).toString(16)
@@ -72,7 +72,7 @@
       monitorIntervalTime: 100,
       stompReconnect: true,
       timeout (orgCmd) {
-        console.log(orgCmd)
+        // console.log(orgCmd)
       }
     }
   }

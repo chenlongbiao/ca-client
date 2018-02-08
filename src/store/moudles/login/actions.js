@@ -10,7 +10,7 @@ export const signup = function ({commit}, list) {
   })
 }
 export const signin = function ({commit}, list) {
-  return axios.post(baseURL + 'signIn', list).then(res => {
+  return axios.post(baseURL + 'login', list).then(res => {
     commit(types.SIGN_IN, res)
   }).catch(error => {
     console.log(error)

@@ -25,14 +25,23 @@
     data () {
       return {
         user: {
-          userName: '',
-          passWord: ''
+          username: '',
+          password: ''
         }
       }
     },
     methods: {
       login () {
-        this.$router.push('home')
+        // this.$store.dispatch('signin', this.user).then(
+        //   () => {
+        //     let editGoodsFlag = this.$store.state.logins.signInstate
+        //     console.log(editGoodsFlag)
+        //   }
+        // )
+        var variable=new XMLHttpRequest()
+        variable.open('post', "/login" ,true)
+        variable.send(this.user)
+        // this.$router.push('home')
       },
       toSignUp () {
         this.$emit('toSignUp', 0)
