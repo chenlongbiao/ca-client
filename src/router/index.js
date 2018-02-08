@@ -19,7 +19,7 @@ const Attachement = r => require.ensure([], () => r(require('@/components/core/r
 const CommonFile = r => require.ensure([], () => r(require('@/components/core/repository/commonFile/CommonFile')), 'CommonFile')
 const Index = r => require.ensure([], () => r(require('@/components/core/index/Index')), 'Index')
 const Setting = r => require.ensure([], () => r(require('@/components/core/setting/Setting')), 'Setting')
-const WebSockt = r => require.ensure([], () => r(require('@/components/Sock/WebSockt')), 'WebSockt')
+const WebSockt = r => require.ensure([], () => r(require('@/components/core/Sock/WebSockt')), 'WebSockt')
 // const ContractFiling = r => require.ensure([], () => r(require('@/components/core/contractManage/contractFiling/ContractFiling')), 'ContractFiling');
 // import Home from '@/components/home/Home'
 // import Archives from '@/components/core/humanCenter/archives/Archives'
@@ -144,14 +144,14 @@ export default new Router({
           path: '/setting',
           name: 'setting',
           component: Setting
+        },
+        // 通信
+        {
+          path: '/WebSockt',
+          name: 'WebSockt',
+          component: WebSockt
         }
       ]
-    },
-    // 通信
-    {
-      path: '/WebSockt',
-      name: 'WebSockt',
-      component: WebSockt
     }
   ]
 })

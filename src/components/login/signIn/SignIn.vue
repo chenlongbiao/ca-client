@@ -2,13 +2,13 @@
   <div class="signIn_class">
       <h4>
     </h4>
-    <el-input id="inp1" class="signIn_input" placeholder="请输入手机号或邮箱" v-model="user.userName">
+    <el-input id="inp1" class="signIn_input" placeholder="请输入手机号或邮箱" v-model="user.username">
       <template  slot="prepend">
         <!--<span style="background: url('../../../assets/user.jpg');height:40px"></span>-->
         <img src="../../../assets/user.jpg"/>
       </template>
     </el-input>
-    <el-input id="inp2" class="signIn_input" placeholder="请输入密码" v-model="user.passWord">
+    <el-input id="inp2" class="signIn_input" placeholder="请输入密码" v-model="user.password">
       <template  slot="prepend">
         <!--<span style="background: url('../../../assets/user.jpg');height:40px"></span>-->
         <img src="../../../assets/password.jpg"/>
@@ -32,15 +32,19 @@
     },
     methods: {
       login () {
-        // this.$store.dispatch('signin', this.user).then(
-        //   () => {
-        //     let editGoodsFlag = this.$store.state.logins.signInstate
-        //     console.log(editGoodsFlag)
-        //   }
-        // )
-        var variable=new XMLHttpRequest()
-        variable.open('post', "/login" ,true)
-        variable.send(this.user)
+        let param = new URLSearchParams()
+        param.append('username', this.user.username)
+        param.append('password', this.user.password)
+        this.$store.dispatch('signin', param).then(
+          () => {
+            let signInstate = this.$store.state.logins.signInstate
+            let status = signInstate.status
+            if (status === 'success') {
+              this.$router.push('home')
+            }
+            console.log(signInstate)
+          }
+        )
         // this.$router.push('home')
       },
       toSignUp () {

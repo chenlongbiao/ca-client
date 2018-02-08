@@ -8,7 +8,7 @@ const mutations = {
   },
   [SIGN_IN] (state, res) {
     // state.signup_states = list
-    state.signInstate = res.data.resState
+    state.signInstate = res.data
     console.log(state)
   }
 }
