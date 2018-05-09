@@ -39,10 +39,10 @@
           () => {
             let signInstate = this.$store.state.logins.signInstate
             let status = signInstate.status
-            if (status === 'success') {
-              this.$router.push('home')
-            }
             console.log(signInstate)
+            if (status === 'success') {
+              this.$router.push('WebSockt')
+            }
           }
         )
         // this.$router.push('home')
